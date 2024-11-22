@@ -80,7 +80,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
                 popup: 'animate__animated animate__zoomOut'
             }
         }).then(() => {
-            window.location.href = 'home.html';
+            window.location.href = 'Home.html';
         });
     } else {
         errorMessage.textContent = `Contraseña incorrecta para ${selectedUser}`;
