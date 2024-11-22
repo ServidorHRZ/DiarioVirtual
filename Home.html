@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#8474A1">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Aquí va el contenido principal -->
+    </div>
+    
+    <nav class="mobile-menu">
+        <a href="#" class="menu-item active">
+            <i class="fas fa-book"></i>
+            <span>Diario</span>
+        </a>
+        <a href="#" class="menu-item">
+            <i class="fas fa-comment-alt"></i>
+            <span>Mensaje</span>
+        </a>
+        <a href="index.html" class="menu-item">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Salir</span>
+        </a>
+    </nav>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.querySelector('.menu-item[href="index.html"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            Swal.fire({
+                title: '¿Estás seguro?',
+                text: "¿Deseas cerrar la sesión?",
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonColor: '#08999D',
+                cancelButtonColor: '#8474A1',
+                confirmButtonText: 'Sí, salir',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = 'index.html';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

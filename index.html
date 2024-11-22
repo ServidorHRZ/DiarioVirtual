@@ -1,1 +1,41 @@
-hols
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>A&M Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h1>A&M</h1>
+            <div class="user-selection">
+                <div class="user-option" data-user="Andres">
+                    <i class="fas fa-male"></i>
+                    <span>Andrés</span>
+                </div>
+                <div class="user-option" data-user="Monica">
+                    <i class="fas fa-female"></i>
+                    <span>Mónica</span>
+                </div>
+            </div>
+            <form id="loginForm">
+                <div class="input-group">
+                    <i class="fas fa-key"></i>
+                    <input type="password" id="password" placeholder="Ingresa tu contraseña" required>
+                </div>
+                <button type="submit">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Iniciar Sesión
+                </button>
+            </form>
+            <div id="error-message"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
